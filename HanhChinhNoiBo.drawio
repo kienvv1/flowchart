@@ -1,90 +1,66 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.9">
-  <diagram name="UseCase-HanhChinhNoiBo" id="HCNB-USECASE-01">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="29.2.9">
+  <diagram name="UseCase-QuanLyBieuMau" id="UC-BIEUMAU-01">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
 
-        <!-- Actors -->
-        <mxCell id="actor_admin" value="Quản trị hệ thống" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="40" y="200" width="40" height="80" as="geometry"/>
+        <!-- Actor -->
+        <mxCell id="actor_admin" value="Quản trị / Lãnh đạo" style="shape=umlActor;verticalLabelPosition=bottom;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="40" height="80" as="geometry"/>
         </mxCell>
 
-        <mxCell id="actor_user" value="Cán bộ" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="40" y="400" width="40" height="80" as="geometry"/>
+        <!-- Use case: Login -->
+        <mxCell id="uc_login" value="Đăng nhập" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="180" width="160" height="50" as="geometry"/>
         </mxCell>
 
-        <mxCell id="actor_leader" value="Lãnh đạo / Người phê duyệt" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="40" y="600" width="40" height="80" as="geometry"/>
+        <!-- Main use case -->
+        <mxCell id="uc_manage_form" value="Quản lý biểu mẫu" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="300" width="220" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- System Boundary -->
-        <mxCell id="boundary" value="PHẦN MỀM HỖ TRỢ HÀNH CHÍNH NỘI BỘ" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="200" y="120" width="1200" height="700" as="geometry"/>
+        <!-- Extended use cases -->
+        <mxCell id="uc_view" value="Hiển thị thông tin biểu mẫu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="260" width="260" height="50" as="geometry"/>
         </mxCell>
 
-        <!-- Use Cases -->
-        <mxCell id="uc_login" value="Đăng nhập hệ thống" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="boundary">
-          <mxGeometry x="260" y="160" width="200" height="50" as="geometry"/>
+        <mxCell id="uc_update" value="Cập nhật thông tin biểu mẫu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="330" width="260" height="50" as="geometry"/>
         </mxCell>
 
-        <mxCell id="uc_folder" value="Quản lý thư mục" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="boundary">
-          <mxGeometry x="260" y="240" width="200" height="50" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc_form" value="Quản lý biểu mẫu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="boundary">
-          <mxGeometry x="260" y="310" width="200" height="50" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc_approve" value="Phê duyệt biểu mẫu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="boundary">
-          <mxGeometry x="260" y="380" width="200" height="50" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc_category" value="Quản lý danh mục kê khai NCKH" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="boundary">
-          <mxGeometry x="260" y="450" width="260" height="50" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc_declare" value="Kê khai hồ sơ NCKH" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="boundary">
-          <mxGeometry x="260" y="520" width="200" height="50" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc_summary" value="Tổng hợp kê khai NCKH" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="boundary">
-          <mxGeometry x="260" y="590" width="230" height="50" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="uc_export" value="Xuất báo cáo (Excel / PDF)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="boundary">
-          <mxGeometry x="260" y="660" width="260" height="50" as="geometry"/>
+        <mxCell id="uc_delete" value="Xóa biểu mẫu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="400" width="260" height="50" as="geometry"/>
         </mxCell>
 
         <!-- Associations -->
-        <mxCell id="e1" style="endArrow=none;" edge="1" parent="1" source="actor_admin" target="uc_login">
+        <mxCell id="e1" style="endArrow=none;" edge="1" parent="1" source="actor_admin" target="uc_manage_form">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e2" style="endArrow=none;" edge="1" parent="1" source="actor_admin" target="uc_folder">
+
+        <!-- Extend relationships -->
+        <mxCell id="e2" value="<<extend>>" style="dashed=1;endArrow=open;" edge="1" parent="1" source="uc_view" target="uc_manage_form">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e3" style="endArrow=none;" edge="1" parent="1" source="actor_admin" target="uc_form">
+
+        <mxCell id="e3" value="<<extend>>" style="dashed=1;endArrow=open;" edge="1" parent="1" source="uc_update" target="uc_manage_form">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e4" style="endArrow=none;" edge="1" parent="1" source="actor_admin" target="uc_category">
+
+        <mxCell id="e4" value="<<extend>>" style="dashed=1;endArrow=open;" edge="1" parent="1" source="uc_delete" target="uc_manage_form">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e5" style="endArrow=none;" edge="1" parent="1" source="actor_user" target="uc_login">
+
+        <!-- Login dependency -->
+        <mxCell id="e5" style="dashed=1;endArrow=open;" edge="1" parent="1" source="uc_view" target="uc_login">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e6" style="endArrow=none;" edge="1" parent="1" source="actor_user" target="uc_declare">
+
+        <mxCell id="e6" style="dashed=1;endArrow=open;" edge="1" parent="1" source="uc_update" target="uc_login">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e7" style="endArrow=none;" edge="1" parent="1" source="actor_leader" target="uc_login">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e8" style="endArrow=none;" edge="1" parent="1" source="actor_leader" target="uc_approve">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e9" style="endArrow=none;" edge="1" parent="1" source="actor_leader" target="uc_summary">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e10" style="endArrow=none;" edge="1" parent="1" source="actor_leader" target="uc_export">
+
+        <mxCell id="e7" style="dashed=1;endArrow=open;" edge="1" parent="1" source="uc_delete" target="uc_login">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
